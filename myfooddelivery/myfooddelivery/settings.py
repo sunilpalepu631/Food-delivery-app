@@ -14,6 +14,10 @@ from datetime import timedelta
 import os
 from pathlib import Path
 
+from decouple import config
+
+# config = Config()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -154,6 +158,8 @@ SIMPLE_JWT = {
 }
 
 
+RAZORPAY_KEY_ID = config('RAZORPAY_KEY_ID')
+RAZORPAY_SECRET_KEY = config('RAZORPAY_SECRET_KEY')
 
-RAZORPAY_KEY_ID = 'rzp_test_61HLgDI5Rzx1x1'
-RAZORPAY_SECRET_KEY = 'yCqfRLeqVgs9YOfNzvNWTZE9'
+print(RAZORPAY_KEY_ID)
+
